@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script id="usercentrics-cmp" data-settings-id="WGSo-AvsCxM5d2" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" async></script>
+<<<<<<< HEAD
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+<script id="usercentrics-cmp" data-settings-id="y8JQohsHv" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" async></script>
 </head>
+=======
+<script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-version="preview" data-settings-id="P-aYfR0Bk" async></script></head>
+>>>>>>> dab04df6333b747cd89a49ea0e2c95c9e1de22c1
 <body>
 <h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<p>Main page</p>
+<a href="pages/gtm.html">GTM</a>
 </body>
 </html>
