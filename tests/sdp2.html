@@ -2,28 +2,33 @@
 <html>
 <head>
 
-  <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="y8JQohsHv" async></script>
+  <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="vvESfIqy-" async></script>
   <script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
 
   <script>
-    uc.deactivateBlocking([
-      'BJz7qNsdj-7'
-
-    ]);
-   
-    uc.blockOnly([
-      'BJz7qNsdj-7'
-
-    ]);
+    uc.reloadOnOptIn('BJz7qNsdj-7'); // reload page on YouTube opt-in
     </script>
 
 </head>
 <body>
-<h1>Main page for the onboarding tests</h1>
+<h1>SDP Exercise 2</h1>
 <a href="testmain.html">Back to main</a>
   <br />
-  Customer reports their Google Maps is blocked despite accepting all the consents. Please investigate this website and try to find out what is causing it and how to fix it.
-  <br /><br />
+  Customer reports their Google Maps is not blocked despite SDP being implemented. Please investigate this website and try to find out what is causing it and how to fix it.
+  <br />
+  <div id="map"></div>
+  <!-- 
+    The `defer` attribute causes the callback to execute after the full HTML
+    document has been parsed. For non-blocking uses, avoiding race conditions,
+    and consistent behavior across browsers, consider loading using Promises
+    with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+    defer
+  ></script>
+  
+  <br />
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eBGIQ7ZuuiU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </body>
 </html>
