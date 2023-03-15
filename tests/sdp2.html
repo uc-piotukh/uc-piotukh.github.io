@@ -1,6 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
 
   <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="vvESfIqy-" async></script>
   <script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
@@ -9,40 +14,56 @@
     uc.reloadOnOptIn('BJz7qNsdj-7'); // reload page on YouTube opt-in
     </script>
 
-<script type="text/javascript">
-  <!-- Stylesheet that you need to recreate -->
-  // <styles rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-  // integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-  // crossorigin="">
 
-  const leafletStyles = document.createElement('link');
-  leafletStyles.rel = 'stylesheet';
-  leafletStyles.href = 'https://unpkg.com/leaflet@1.6.0/dist/leaflet.css';
-  leafletStyles.integrity = 'sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==';
-  leafletStyles.crossOrigin = '';
-  document.head.appendChild(leafletStyles);
-</script>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
-<script type="text/javascript"  onload="loadMap();" src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-        crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		.leaflet-container {
+			height: 400px;
+			width: 600px;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	</style>
+
+	
 </head>
 <body>
-<h1>SDP Exercise 2</h1>
+
+  <h1>SDP Exercise 2</h1>
 <a href="testmain.html">Back to main</a>
   <br />
   Customer reports that their OSM implementation does not work despite SDP being implemented (they implemented it using Leaflet). Please investigate this website and try to find out what is causing it and how to fix it.
-  <br />
- 
-  <script type="text/javascript">
-    function loadMap() {
-      var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-    }
-    
+  <br /><br /><br />
+
+
+
+<div id="map" style="width: 600px; height: 400px;"></div>
+<script>
+
+	const map = L.map('map').setView([51.505, -0.09], 13);
+
+	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+
 </script>
-  
-  <br /> <br /> <br />
+
+
+<br /> <br /> <br />
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eBGIQ7ZuuiU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
 </body>
 </html>
+
