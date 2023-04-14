@@ -1,94 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script async src="https://app.usercentrics.eu/browser-sdk/4.21.1/bundle.js"></script>
+    <script type="application/javascript" src="https://app.usercentrics.eu/browser-sdk/4.21.1/bundle.js"></script>
 
 
-
-    <script>
-        /*
-        function initUsercentrics() {
-  window.usercentrics.controllerId = getControllerIdFromCookie() //Returns controller-id from cookie as string, e.g. "fx92wk...."
-  settingsid = "y8JQohsHv"
-  
-  UC = new Usercentrics(settingsid, {
-    language: window.usercentrics.language,
-    controllerId: window.usercentrics.controllerId
-  })
-  
-  console.log(window.usercentrics.controllerId) //returns "fx92wk...."
-  
-  UC.init().then(() => {
-    console.log(UC.getControllerId()) //also returns "fx92wk...."
-    UC.getServicesFullInfo().then(() => { //all consents returned as 'false', but on the old session, consents were all set to true
-      
-
-    })
-  })
-}
-*/
-    </script>
-
-
-<script>
-    /*
-const UC = new UC_SDK.default('e78D3JJSU');
-
-UC.init().then((initialUIValues) => {
-    // getCategories() returns all categories' and data processing services' information
-    const categories = UC.getCategories();
-    // getSettings() returns all Usercentrics settings you need for your custom solution
-    const settings = UC.getSettings();
-
+    <script type="application/javascript">
+      /*
+    
+    const cont = '03761b584d5281cd730c33e0582e8a2b77e62bad9839ce9ac08fded2623d391f';
+    
+    
+    function init(){
+      const UC = new UC_SDK.default('y8JQohsHv');
+    const initialUIValues =  UC.init();
+      const categories = UC.getCategories();
+    const settings = UC.getSettingsCore();
+    const labels = UC.getSettingsLabels();
     if (initialUIValues.variant === UC_SDK.UI_VARIANT.DEFAULT) {
-        switch (initialUIValues.initialLayer) {
-            case UC_SDK.UI_LAYER.FIRST_LAYER:
-                // Show first layer (i.e. privacy banner)
-                return;
-            case UC_SDK.UI_LAYER.PRIVACY_BUTTON:
-                // Show privacy button
-                return;
-            case UC_SDK.UI_LAYER.NONE:
-            default:
-                // Show nothing
-                return;
-        }
+      switch (initialUIValues.initialLayer) {
+        case UC_SDK.UI_LAYER.FIRST_LAYER:
+    
+          return;
+        case UC_SDK.UI_LAYER.PRIVACY_BUTTON:
+          // Show privacy button
+          return;
+        case UC_SDK.UI_LAYER.NONE:
+        default:
+          // Show nothing
+          return;
     }
-});
-
-*/
-async function init(){
-    const UC = new Usercentrics.DEFAULT('y8JQohsHv');
-const initialUIValues = await UC.init();
-
-// getSettingsCore() and getSettingsLabels() returns all Usercentrics settings you need for your custom solution
-const settings = UC.getSettingsCore();
-const labels = UC.getSettingsLabels();
-// getCategories() returns all categories' and data processing services' information
-const categories = UC.getCategories();
-
-if (initialUIValues.variant === UI_VARIANT.DEFAULT) {
-  switch (initialUIValues.initialLayer) {
-    case UI_LAYER.FIRST_LAYER:
-    UC_UI.showFirstLayer();
-    console.log("somehow first layer");
-
-    return;
-    case UI_LAYER.PRIVACY_BUTTON:
-console.log("something happens");
-      return;
-    case UI_LAYER.NONE:
-    default:
-      // Show nothing
-      return;
-  }
-}
-}
-
-init();
-
-</script>
-
+    
+      }
+    }
+    */
+    function init(){
+      
+    const controller = "03761b584d5281cd730c33e0582e8a2b77e62bad9839ce9ac08fded2623d391f";
+        settingsid = "y8JQohsHv";
+      
+      UC = new UC_SDK.default(settingsid, {
+        controllerId: controller
+      })
+      
+      console.log(UC.controllerId) //returns "fx92wk...."
+      
+      UC.init().then(() => {
+        console.log(UC.getControllerId()) //also returns "fx92wk...."
+        UC.getServicesFullInfo().then(() => { //all consents returned as 'false', but on the old session, consents were all set to true
+          //...
+        })
+      })
+    }
+    
+    
+      init();
+      
+    </script>
 </head>
 <body>
 
