@@ -7,7 +7,11 @@
     <script type="application/javascript">
       /*
     
-    const cont = '03761b584d5281cd730c33e0582e8a2b77e62bad9839ce9ac08fded2623d391f';
+    
+    const controller = '03761b584d5281cd730c33e0582e8a2b77e62bad9839ce9ac08fded2623d391f';
+        settingsid = "y8JQohsHv";
+    
+    
     
     
     function init(){
@@ -35,8 +39,8 @@
     */
     function init(){
       
-    const controller = "03761b584d5281cd730c33e0582e8a2b77e62bad9839ce9ac08fded2623d391f";
-        settingsid = "y8JQohsHv";
+    const controller = '2aa82ea61b2ee232cf39c052900723419cc58bfd90df75a599c16df432163a8c';
+        settingsid = 'Vw1-zWkhR';
       
       UC = new UC_SDK.default(settingsid, {
         controllerId: controller
@@ -46,9 +50,7 @@
       
       UC.init().then(() => {
         console.log(UC.getControllerId()) //also returns "fx92wk...."
-        UC.getServicesFullInfo().then(() => { //all consents returned as 'false', but on the old session, consents were all set to true
-          //...
-        })
+        UC.getServicesFullInfo();
       })
     }
     
