@@ -2,7 +2,22 @@
 <html>
 <head>
 <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="WGSo-AvsCxM5d2" async></script>
+<script>
+    const customMethod = () => {
+  
+       
+    }
+    
+    if (window.UC_UI && window.UC_UI.isInitialized()) {
 
+      console.log('UC UI already initialized');
+
+      __tcfapi('getTCData', 2, function(data,success){console.log(data.tcString);},[755]);
+
+
+    } 
+
+</script>
 </head>
 <body>
 
