@@ -43,12 +43,15 @@
     settingsid = "y8JQohsHv";
       
       UC = new UC_SDK.default(settingsid)
+
+      var session_data = window.UC_UI_SESSION_DATA;
       
-      console.log(UC.controllerId) //returns "fx92wk...."
+      //console.log(UC.controllerId) //returns "fx92wk...."
       
-      UC.init().then(() => {
-        console.log(UC.getControllerId()) //also returns "fx92wk...."
-        UC.getServicesFullInfo();
+      const initialUIValues = UC.init().then(() => {
+        initialUIValues.UC_UI_SESSION_DATA = session_data;
+
+        console.log(UC.getServicesFullInfo());
         console.log("Are all consents accepted: "+ UC.areAllConsentsAccepted().toString())
       })
     }
