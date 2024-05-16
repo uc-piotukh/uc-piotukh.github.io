@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script type="application/javascript" src="https://app.usercentrics.eu/browser-sdk/4.21.1/bundle.js"></script>
+    <script type="application/javascript" src="https://app.usercentrics.eu/browser-sdk/4.35.1/bundle.js"></script>
 
 
     <script type="application/javascript">
@@ -39,18 +39,17 @@
     */
     function init(){
       
-    const controller = '01b6a06f21d341792d662a8a2a8e6953a29452956fc3d30a32bc1ee6092d431b';
-        settingsid = 'Vw1-zWkhR';
+    //const controller = '01b6a06f21d341792d662a8a2a8e6953a29452956fc3d30a32bc1ee6092d431b';
+    settingsid = "y8JQohsHv";
       
-      UC = new UC_SDK.default(settingsid, {
-        controllerId: controller
-      })
+      UC = new UC_SDK.default(settingsid)
       
       console.log(UC.controllerId) //returns "fx92wk...."
       
       UC.init().then(() => {
         console.log(UC.getControllerId()) //also returns "fx92wk...."
         UC.getServicesFullInfo();
+        console.log("Are all consents accepted: "+ UC.areAllConsentsAccepted().toString())
       })
     }
     
