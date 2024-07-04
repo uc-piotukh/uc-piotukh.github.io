@@ -42,7 +42,7 @@
       const controller = window.appcontroller;
     const settingsid = "y8JQohsHv";
     
-      UC = new UC_SDK.default(settingsid, controller);
+      UC = new UC_SDK.default(settingsid,  { controllerId: controller});
 
       UC.init().then(() => {
 
