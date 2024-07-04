@@ -39,16 +39,13 @@
     */
     function init(){
       
-    //const controller = '01b6a06f21d341792d662a8a2a8e6953a29452956fc3d30a32bc1ee6092d431b';
-    settingsid = "y8JQohsHv";
+      const controller = window.appcontroller;
+    const settingsid = "y8JQohsHv";
     
-      UC = new UC_SDK.default(settingsid)
+      UC = new UC_SDK.default(settingsid, controller);
 
       UC.init().then(() => {
 
-        console.log(UC.getServicesBaseInfo());
-        console.log(UC.areAllConsentsAccepted().toString());
-        console.log("Are all consents accepted: "+ UC.areAllConsentsAccepted().toString());
       })
     }
     
