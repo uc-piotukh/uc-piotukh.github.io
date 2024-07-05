@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="application/javascript" src="https://app.usercentrics.eu/browser-sdk/4.32.0/bundle.js"></script>
+
+
+    <script type="application/javascript">
+      /*
+    
+    
+    const controller = '03761b584d5281cd730c33e0582e8a2b77e62bad9839ce9ac08fded2623d391f';
+        settingsid = "y8JQohsHv";
+    
+    
+    
+    
+    function init(){
+      const UC = new UC_SDK.default('y8JQohsHv');
+    const initialUIValues =  UC.init();
+      const categories = UC.getCategories();
+    const settings = UC.getSettingsCore();
+    const labels = UC.getSettingsLabels();
+    if (initialUIValues.variant === UC_SDK.UI_VARIANT.DEFAULT) {
+      switch (initialUIValues.initialLayer) {
+        case UC_SDK.UI_LAYER.FIRST_LAYER:
+    
+          return;
+        case UC_SDK.UI_LAYER.PRIVACY_BUTTON:
+          // Show privacy button
+          return;
+        case UC_SDK.UI_LAYER.NONE:
+        default:
+          // Show nothing
+          return;
+    }
+    
+      }
+    }
+    */
+    function init(){
+      
+      const controller = window.appdata.getData();
+    const settingsid = "y8JQohsHv";
+    
+      UC = new UC_SDK.default(settingsid,  { controllerId: controller});
+
+      UC.init().then(() => {
+
+      })
+    }
+    
+    
+      init();
+      
+    </script>
+</head>
+<body>
+
+<h1>Usercentrics</h1>
+<p>SDK implementation for testing purposes</p>
+</body>
+</html>
