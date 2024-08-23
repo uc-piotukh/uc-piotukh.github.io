@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download and Compare JSON Files</title>
+</head>
+<body>
+    <h1>Download and Compare JSON Files</h1>
+    
+    <label for="json1-url">JSON 1 URL:</label>
+    <input type="text" id="json1-url" placeholder="Enter the first JSON URL"><br><br>
+    
+    <label for="json2-url">JSON 2 URL:</label>
+    <input type="text" id="json2-url" placeholder="Enter the second JSON URL"><br><br>
+    
+    <button onclick="fetchAndCompareJsonFiles()">Download, Read, and Verify</button>
+    
+    <h2>Verification Output:</h2>
+    <p><strong>JSON 1:</strong> <span id="json1-output"></span></p>
+    <p><strong>JSON 2:</strong> <span id="json2-output"></span></p>
+
+    <script src="tcf.js"></script>
+</body>
+</html>
