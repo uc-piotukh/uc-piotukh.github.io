@@ -1,0 +1,83 @@
+{
+    "consents": [
+      {
+        "status": false,
+        "templateId": "8V156Cy6kZwoe2",
+        "timestamp": 1729263774000
+      },
+      {
+        "status": true,
+        "templateId": "8V156Cy6kZwoe2",
+        "timestamp": 1729263776000
+      },
+      {
+        "status": true,
+        "templateId": "8V156Cy6kZwoe2",
+        "timestamp": 1729264682000
+      },
+      {
+        "status": false,
+        "templateId": "lKKb_UKJv_9qwi",
+        "timestamp": 1729263774000
+      },
+      {
+        "status": true,
+        "templateId": "lKKb_UKJv_9qwi",
+        "timestamp": 1729263776000
+      },
+      {
+        "status": true,
+        "templateId": "lKKb_UKJv_9qwi",
+        "timestamp": 1729264682000
+      },
+      {
+        "status": true,
+        "templateId": "S1pcEj_jZX",
+        "timestamp": 1729263774000
+      },
+      {
+        "status": true,
+        "templateId": "S1pcEj_jZX",
+        "timestamp": 1729263776000
+      },
+      {
+        "status": true,
+        "templateId": "S1pcEj_jZX",
+        "timestamp": 1729264682000
+      },
+      {
+        "status": true,
+        "templateId": "H1Vl5NidjWX",
+        "timestamp": 1729263774000
+      },
+      {
+        "status": true,
+        "templateId": "H1Vl5NidjWX",
+        "timestamp": 1729263776000
+      },
+      {
+        "status": true,
+        "templateId": "H1Vl5NidjWX",
+        "timestamp": 1729264682000
+      },
+      {
+        "status": false,
+        "templateId": "BJz7qNsdj-7",
+        "timestamp": 1729263774000
+      },
+      {
+        "status": true,
+        "templateId": "BJz7qNsdj-7",
+        "timestamp": 1729263776000
+      },
+      {
+        "status": true,
+        "templateId": "BJz7qNsdj-7",
+        "timestamp": 1729264682000
+      }
+    ],
+    "controllerId": "0a49a9f90b2c6042daf442bacd88a47a3a1285774b154852c1419c92ec90172a",
+    "language": "en",
+    "tcf": null,
+    "ccpa": null
+  }
